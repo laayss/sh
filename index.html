@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Letter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        #intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #282828;
+            padding: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        #intro h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        #intro p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        #intro button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #intro button:hover {
+            background-color: #666;
+        }
+
+        #letter {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px;
+            background-color: #1a1a1a;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 60vh;
+        }
+
+        #letter h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        #letter p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        #cryingEmoji {
+            margin-top: 20px;
+            font-size: 3rem;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            #intro h1, #letter h1 {
+                font-size: 1.5rem;
+            }
+
+            #intro p, #letter p {
+                font-size: 0.9rem;
+            }
+
+            #intro button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="intro">
+        <h1>Hai bebi...</h1>
+        <p>Alam mo naman na hindi ako very expressive through words, pero I want to keep our promise na sasabihin natin sa isa't isa if may something nakakabother satin.</p>
+        <button onclick="showLetter()">Continue</button>
+    </div>
+
+    <div id="letter">
+        <h1>HSHSHS</h1>
+        <p>
+            Hai bebi,<br><br>
+        I hope you don’t mind me writing all of this down—it’s easier for me to sort through my feelings this way. You know naman that I’m not the most expressive person when it comes to words, but I didn’t want to break our promise: if something’s bothering us, we’ll tell each other. So… eto na. <br><br>
+        Pauwi na tayo kanina, and we were holding hands. I was happy kasi for me, moments like that feel so special. But then nung nasa gate na tayo, you let go of my hand. At first, I thought baka may nakita kang kakilala, kasi usually sinasabi mo naman, like “hala tita ko” or something. Pero this time, you didn’t say anything. It left me wondering, and I couldn’t stop thinking about it.<br> <br>
+        The thought crossed my mind na baka you were worried about what someone might think, especially if it was an old classmate or someone who knew you from before. I understand naman na those situations can be tricky, and I’m not trying to judge or assume anything. Pero I can’t help but feel a bit unsure and sad about it, kasi holding your hand means a lot to me. It’s like saying, “This is us, and I’m proud.”<br><br>
+        I want you to know that I’m not upset with you, baby.. I just wanted to share how I felt, kasi I didn’t want this small moment to grow into something bigger in my mind. I’m saying this because I trust you, and I know we can talk about things like this openly.
+
+I love you so much, and I know how much you love me too. I just want us to keep being honest with each other, even about the small things, para we understand each other better. Thank you for always being patient with me, for listening, and for loving me in all the ways that you do.
+        </p>        
+        <div id="cryingEmoji">😭</div>
+    </div>
+
+    <script>
+        function showLetter() {
+            document.getElementById('intro').style.display = 'none';
+            document.getElementById('letter').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
